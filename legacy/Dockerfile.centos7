@@ -1,0 +1,9 @@
+FROM centos:7
+
+LABEL org.opencontainers.image.authors="Khulnasoftbot <bot@khulnasoft.com>"
+LABEL org.opencontainers.image.source="https://github.com/khulnasoft/helper-images"
+LABEL org.opencontainers.image.title="Khulnasoft CentOS 7 Legacy image"
+LABEL org.opencontainers.image.description="Base image for CentOS 7 with core repositories updated to use vault.centos.org"
+LABEL org.opencontainers.image.vendor="KhulnaSoft, Ltd."
+
+COPY legacy/centos-7.repo /etc/yum.repos.d/CentOS-Base.repo

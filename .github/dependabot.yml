@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: docker
+    directory: /base
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: docker
+    directory: /builder
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: docker
+    directory: /static-builder
+    schedule:
+      interval: weekly

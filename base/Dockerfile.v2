@@ -1,0 +1,59 @@
+# This image is used to speed up build process for official netdata images.
+#
+# Copyright: 2019 and later Khulnasoft Incorporated
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Author : Paul Emm. Katsoulakis <paul@khulnasoft.rocks>
+# Author : Austin S. Hemmelgarn <austiN@khulnasoft.com>
+
+FROM debian:12 as builder
+
+LABEL org.opencontainers.image.authors="Khulnasoftbot <bot@khulnasoft.com>"
+LABEL org.opencontainers.image.source="https://github.com/khulnasoft/helper-images"
+LABEL org.opencontainers.image.title="Khulnasoft Agent Docker Base Image"
+LABEL org.opencontainers.image.description="Base image for official Khulnasoft Agent Docker images."
+LABEL org.opencontainers.image.vendor="KhulnaSoft, Ltd."
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN DISTRO_CODENAME="$(awk -F= '/VERSION_CODENAME/{print $2}' /etc/os-release)" && \
+    echo "deb http://deb.debian.org/debian ${DISTRO_CODENAME}-backports main" > /etc/apt/sources.list.d/backports.list && \
+    chown _apt:root /var/cache/apt /var/lib/apt && \
+    apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y --no-install-recommends apt-utils && \
+    apt-get install -y --no-install-recommends \
+                    ca-certificates \
+                    curl \
+                    fping \
+                    iproute2 \
+                    jq \
+                    libcurl4 \
+                    libgcrypt20 \
+                    libjson-c5 \
+                    liblz4-1 \
+                    libmariadb3 \
+                    libmnl0 \
+                    libmongoc-1.0-0 \
+                    libprotobuf32 \
+                    libsnappy1v5 \
+                    libssl3 \
+                    libsystemd0 \
+                    libuuid1 \
+                    libuv1 \
+                    libvirt-clients \
+                    libyaml-0-2 \
+                    libzstd1 \
+                    lm-sensors \
+                    msmtp \
+                    vim-tiny \
+                    ncurses-base \
+                    netcat-openbsd \
+                    openssl \
+                    procps \
+                    python3 \
+                    zlib1g && \
+    if [ "$(uname -m)" != "ppc64le" ]; then \
+        apt-get install -y --no-install-recommends freeipmi libipmimonitoring6 || exit 1 ; \
+    fi && \
+    rm -rf /var/cache/apt/* /var/lib/apt/lists/*
