@@ -1,4 +1,4 @@
-FROM netdata/legacy:centos7
+FROM quay.io/netdata/legacy:centos7
 
 LABEL org.opencontainers.image.authors="Khulnasoftbot <info@khulnasoft.com>"
 LABEL org.opencontainers.image.source="https://github.com/khulnasoft/helper-images"
