@@ -8,7 +8,7 @@
 
 # This image is used to speed up build process for official netdata images.
 
-FROM alpine:3.19 AS builder
+FROM alpine:3.20 AS builder
 
 LABEL org.opencontainers.image.authors="Khulnasoftbot <info@khulnasoft.com>"
 LABEL org.opencontainers.image.source="https://github.com/khulnasoft/helper-images"
