@@ -1,6 +1,6 @@
 FROM debian:bookworm
 
-ENV EMAIL=bot@khulnasoft.com
+ENV EMAIL=info@khulnasoft.com
 ENV FULLNAME="Khulnasoft Builder"
 ENV VERSION=0.1
 

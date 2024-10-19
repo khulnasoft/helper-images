@@ -4,13 +4,13 @@
 # Copyright: 2023 and later Khulnasoft Incorporated
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
-# Author : Khulnasoft packaging team <agent-sre@khulnasoft.com>
+# Author : Khulnasoft packaging team <support@khulnasoft.com>
 
 # This image is used to speed up test process for netdata ansible-docker images.
 
-FROM ubuntu:20.04 as builder
+FROM ubuntu:20.04 AS builder
 
-LABEL org.opencontainers.image.authors="Khulnasoftbot <bot@khulnasoft.com>"
+LABEL org.opencontainers.image.authors="Khulnasoftbot <info@khulnasoft.com>"
 LABEL org.opencontainers.image.source="https://github.com/khulnasoft/helper-images"
 LABEL org.opencontainers.image.title="Khulnasoft Ansible-Docker Base Image"
 LABEL org.opencontainers.image.description="Base image for official Khulnasoft Ansible-Docker images."

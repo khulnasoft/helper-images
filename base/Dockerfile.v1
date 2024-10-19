@@ -8,9 +8,9 @@
 
 # This image is used to speed up build process for official netdata images.
 
-FROM alpine:3.19 as builder
+FROM alpine:3.19 AS builder
 
-LABEL org.opencontainers.image.authors="Khulnasoftbot <bot@khulnasoft.com>"
+LABEL org.opencontainers.image.authors="Khulnasoftbot <info@khulnasoft.com>"
 LABEL org.opencontainers.image.source="https://github.com/khulnasoft/helper-images"
 LABEL org.opencontainers.image.title="Khulnasoft Agent Docker Base Image"
 LABEL org.opencontainers.image.description="Base image for official Khulnasoft Agent Docker images."

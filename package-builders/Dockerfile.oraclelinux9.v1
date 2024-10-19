@@ -1,6 +1,6 @@
 FROM oraclelinux:9
 
-LABEL org.opencontainers.image.authors="Khulnasoftbot <bot@khulnasoft.com>"
+LABEL org.opencontainers.image.authors="Khulnasoftbot <info@khulnasoft.com>"
 LABEL org.opencontainers.image.source="https://github.com/khulnasoft/helper-images"
 LABEL org.opencontainers.image.title="Khulnasoft Package Builder for Oracle Linux 9"
 LABEL org.opencontainers.image.description="Package builder image for Khulnasoft official RPM packages for Oracle Linux 9"

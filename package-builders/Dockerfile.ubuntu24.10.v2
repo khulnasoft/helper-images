@@ -1,12 +1,12 @@
 FROM ubuntu:24.10
 
-LABEL org.opencontainers.image.authors="Khulnasoftbot <bot@khulnasoft.com>"
+LABEL org.opencontainers.image.authors="Khulnasoftbot <info@khulnasoft.com>"
 LABEL org.opencontainers.image.source="https://github.com/khulnasoft/helper-images"
 LABEL org.opencontainers.image.title="Khulnasoft Package Builder for Ubuntu 24.10"
 LABEL org.opencontainers.image.description="Package builder image for Khulnasoft official DEB packages for Ubuntu 24.10"
 LABEL org.opencontainers.image.vendor="KhulnaSoft, Ltd."
 
-ENV EMAIL=bot@khulnasoft.com
+ENV EMAIL=info@khulnasoft.com
 ENV FULLNAME="Khulnasoft Builder"
 ENV VERSION=0.1
 
